@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stadium"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/GoalTextA"
+                    android:layout_marginRight="25dp"
+                    android:text="@string/ButtonGoals"/>
+
+                <Button
+                    android:id="@+id/decreGoalA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementGoalA"
+                    />
+
+                <Button
+                    android:id="@+id/increGoalA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementGoalA"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/FreeTextA"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/ButtonFreeKick"
+                    />
+
+                <Button
+                    android:id="@+id/decreFreeA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementFreeA"
+                 />
+
+                <Button
+                    android:id="@+id/increFreeA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementFreeA"
+                 />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/OffTextA"
+                    android:layout_marginRight="8dp"
+                    android:text="OFSIDE"
+                     />
+
+                <Button
+                    android:id="@+id/decreOffA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementOffA"
+                />
+
+                <Button
+                    android:id="@+id/increOffA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementOffA"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/YellowTextA"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/ButtonYellowCard"
+                    />
+
+                <Button
+                    android:id="@+id/decreYellowA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementYellowA"
+                    />
+
+                <Button
+                    android:id="@+id/increYellowA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementYellowA"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/RedTextA"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/ButtonRedCard"
+                    />
+
+                <Button
+                    android:id="@+id/decreRedA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementRedA"
+                    />
+
+                <Button
+                    android:id="@+id/increRedA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementRedA"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/CornerTextA"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/ButtonCornerKick"
+                    />
+
+                <Button
+                    android:id="@+id/decreCornerA"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementCornerA"
+                    />
+
+                <Button
+                    android:id="@+id/increCornerA"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementCornerA"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Team A"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumGoalTextA"
+                    android:text="@string/SumGoals"
+                     />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumGoalsA"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumFreeTextA"
+                    android:text="@string/SumFreeKicks"
+                     />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumFreeA"
+                    android:text="@string/InitialValue"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumOffTextA"
+                    android:text="@string/SumOffsides"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumOffA"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumYellowTextA"
+                    android:text="@string/SumYellowCards"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumYellowA"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumRedTextA"
+                    android:text="@string/SumRedCards"
+                   />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumRedA"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumCornerTextA"
+                    android:text="@string/SumCornerKicks"
+                   />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumCornerA"
+                    android:text="@string/InitialValue"
+                   />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/GoalTextB"
+                    android:layout_marginRight="25dp"
+                    android:text="@string/ButtonGoals"
+                    />
+
+                <Button
+                    android:id="@+id/decreGoalB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementGoalB"
+                    />
+
+                <Button
+                    android:id="@+id/increGoalB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementGoalB"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/FreeTextB"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/ButtonFreeKick"
+                    />
+
+                <Button
+                    android:id="@+id/decreFreeB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementFreeB"
+                    />
+
+                <Button
+                    android:id="@+id/increFreeB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementFreeB"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/OffTextB"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/ButtonOffside"
+                    />
+
+                <Button
+                    android:id="@+id/decreOffB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementOffB"
+                    />
+
+                <Button
+                    android:id="@+id/increOffB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementOffB"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/YellowTextB"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/ButtonYellowCard"
+                     />
+
+                <Button
+                    android:id="@+id/decreYellowB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementYellowB"
+                    />
+
+                <Button
+                    android:id="@+id/increYellowB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementYellowB"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/RedTextB"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/ButtonRedCard"
+                     />
+
+                <Button
+                    android:id="@+id/decreRedB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementRedB"
+                    />
+
+                <Button
+                    android:id="@+id/increRedB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementRedB"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MyTextBoxStyle"
+                    android:id="@+id/CornerTextB"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/ButtonCornerKick"
+                    />
+
+                <Button
+                    android:id="@+id/decreCornerB"
+                    style="@style/MyDownButtonStyle"
+                    android:onClick="decrementCornerB"
+                    />
+
+                <Button
+                    android:id="@+id/increCornerB"
+                    style="@style/MyUpButtonStyle"
+                    android:onClick="incrementCornerB"
+                    />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Team B"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumGoalTextB"
+                    android:text="@string/SumGoals"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumGoalsB"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumFreeTextB"
+                    android:text="@string/SumFreeKicks"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumFreeB"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumOffTextB"
+                    android:text="@string/SumOffsides"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumOffB"
+                    android:text="@string/InitialValue"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumYellowTextB"
+                    android:text="@string/SumYellowCards"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumYellowB"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumRedTextB"
+                    android:text="@string/SumRedCards"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumRedB"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/SumCornerTextB"
+                    android:text="@string/SumCornerKicks"
+                    />
+
+                <TextView
+                    style="@style/MySumTextBoxStyle"
+                    android:id="@+id/IntSumCornerB"
+                    android:text="@string/InitialValue"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"
+        android:text="Reset" />
+
+</RelativeLayout>

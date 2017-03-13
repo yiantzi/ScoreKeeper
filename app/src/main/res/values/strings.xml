@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="ButtonGoals">GOAL</string>
+    <string name="ButtonFreeKick">F-KICK</string>
+    <string name="ButtonOffside">OFSIDE</string>
+    <string name="ButtonYellowCard">Y-CARD</string>
+    <string name="ButtonRedCard">R-CARD</string>
+    <string name="ButtonCornerKick">C-KICK</string>
+    <string name="SumGoals">"Goals: "</string>
+    <string name="SumFreeKicks">"Free Kicks: "</string>
+    <string name="SumOffsides">"Offsides: "</string>
+    <string name="SumYellowCards">"Yellow Cards: "</string>
+    <string name="SumRedCards">"Red Cards: "</string>
+    <string name="SumCornerKicks">"Corner Kicks: "</string>
+    <string name="InitialValue">0</string>
+
+
+</resources>
